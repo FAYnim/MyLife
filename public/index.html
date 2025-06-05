@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLife - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar / Navigasi -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1 style="font-family: 'Playfair Display', serif;">MyLife</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-list-check"></i> Habits</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Progress</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/50/FFB6C1/FFFFFF?text=JP" alt="User Avatar">
+                <span>Jane P.</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </aside>
+
+        <!-- Konten Utama Dashboard -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <h2 style="font-family: 'Playfair Display', serif;">Good Morning, Jane!</h2>
+                    <p id="current-date"></p>
+                </div>
+                <div class="header-right">
+                    <button class="add-habit-btn"><i class="fas fa-plus"></i> Add New Habit</button>
+                </div>
+            </header>
+
+            <!-- Seksi Overview Cards -->
+            <section class="overview-cards">
+                <div class="card overview-card">
+                    <h3>Streak</h3>
+                    <p class="big-number">7 days <i class="fas fa-fire" style="color: var(--accent-color);"></i></p>
+                </div>
+                <div class="card overview-card">
+                    <h3>Completed Today</h3>
+                    <p class="big-number">3/5 <i class="fas fa-check-circle" style="color: var(--secondary-color);"></i></p>
+                </div>
+                <div class="card overview-card">
+                    <h3>New Habits</h3>
+                    <p class="big-number">2 <i class="fas fa-star" style="color: var(--accent-color);"></i></p>
+                </div>
+            </section>
+
+            <!-- Seksi Habit Hari Ini -->
+            <section class="today-habits">
+                <h2 style="font-family: 'Playfair Display', serif;">Today's Habits</h2>
+                <div class="habit-list">
+                    <!-- Habit items will be populated by JS -->
+                </div>
+            </section>
+
+            <!-- Seksi Progres (Placeholder untuk Chart) -->
+            <section class="progress-charts">
+                <h2 style="font-family: 'Playfair Display', serif;">Your Progress</h2>
+                <div class="chart-container">
+                    <div class="chart-placeholder">
+                        <p>Completion Rate (Last 7 Days)</p>
+                        <img src="https://via.placeholder.com/400x150/ADD8E6/FFFFFF?text=Chart+Placeholder" alt="Chart" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                    <div class="chart-placeholder">
+                        <p>Monthly Summary</p>
+                        <img src="https://via.placeholder.com/400x150/ADD8E6/FFFFFF?text=Chart+Placeholder" alt="Chart" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
