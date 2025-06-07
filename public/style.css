@@ -12,6 +12,17 @@
     --cabin-font: 'Cabin', sans-serif;
 }
 
+body.dark-theme {
+    --primary-color: #00022b;
+    --secondary-color: #4fa5d8;
+    --accent-color: #e7c8e7;
+    --text-color: #ffffff;
+    --light-text-color: #c0c0c0;
+    --background-light: #0a0a2a;
+    --card-background: #111144;
+    --border-color: #2a2a4a;
+}
+
 /* Global Styles & Reset */
 * {
     box-sizing: border-box;
@@ -30,6 +41,7 @@ body {
     align-items: flex-start; /* Mengatur agar konten tidak vertikal center di desktop */
     padding: 20px; /* Padding di sekitar dashboard */
 }
+
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--playfair-display);

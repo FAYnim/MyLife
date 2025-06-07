@@ -93,3 +93,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Theme toggle
+  const themeToggleBtn = document.getElementById('themeToggleBtn');
+  const icon = themeToggleBtn.querySelector('i');
+
+  // Cek preferensi tema sebelumnya
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+
+  themeToggleBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    icon.classList.toggle('fa-moon', !isDark);
+    icon.classList.toggle('fa-sun', isDark);
+    // Simpan preferensi
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+});
